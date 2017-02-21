@@ -1,0 +1,52 @@
+.hero{
+	height: 600px;
+	overflow:hidden;
+	position: relative;
+}
+.hero__bg{
+	top:0;
+	width: 100%;
+	@include centered(x);
+}
+
+.hero__container{
+	@include centered(y);
+	width: 100%;
+}
+
+.c-hero__title-pic{
+	@include centered();
+}
+
+.user{
+	color: #fff;
+	font-weight:100;
+	text-align: center;
+	@include centered();
+}
+
+.user__pic-container{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin-bottom: 25px;
+	overflow: hidden;
+	display: inline-block;	
+}
+
+.user__pic{
+	
+}
+
+.user__name{
+
+	margin-bottom: 10px;
+	font-size: 2.2em;
+	
+}
+
+.user__desc{
+
+	
+}
+

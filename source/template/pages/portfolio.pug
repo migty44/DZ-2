@@ -1,0 +1,53 @@
+extends ../_template
+
+block variables
+	- var title = 'Константинов Данил'
+
+block content
+	.wrapper
+		section.l-section.hero
+			.hero__bg
+				img(src="assets/img/backgr1800.png" alt="").hero_bg-img
+
+			.hero__container
+				img.c-hero__title-pic
+
+				.user
+					.user__pic-container
+						img(src="assets/img/person.png" alt="").user__pic
+					.user__name
+						| Danil Konstantinov
+					.user__desc
+						| Directors site
+
+			ul.socials
+				li.socials__item
+					a.socials__link
+
+		section.section.about
+			.about__col.about__col_left
+				svg.about__triangle
+				.c-section-title
+					| Обо мне
+				.c-about
+					.c-about__pic
+					.c-block-title
+					.c-block-text
+
+			.l-about__col.l-about__col_right
+				.l-skills
+					.c-block-title
+					.l-skills__text
+						p
+						p
+						p
+					ul.l-skills-group
+						li.l-skills-group__item
+							.c-skills-group__title Frontend
+							ul.l-skills-list
+								li.l-skills-list__item
+									.c-skill
+										svg.c-skill__circle
+										.c-skill__title
+
+		section.l-section.l-map

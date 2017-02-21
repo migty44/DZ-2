@@ -1,5 +1,10 @@
+@import 'mixins/centered';
+
 body {
   margin: 0;
 }
 
 @import 'common/greating';
+@import 'blocks/user';
+@import 'blocks/hero';
+@import 'blocks/about';
