@@ -1,0 +1,103 @@
+.skills {
+
+}
+.skills__title {
+  @include bernier;
+  font-size: 2.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 60%;
+  margin-left: 20%;
+  text-align: center;
+  color: $titlegrey;
+  display: inline-block;
+  position: relative;
+
+      &:before, &:after{
+        content: "";
+        display: block;
+        width: 22px;
+        height: 5px;
+        @include centered(y);
+        background: #c9c9c6;
+      }
+
+      &:before{
+        left: 30px;
+      }
+
+      &:after{
+        right: 30px;
+      }
+}
+
+.skills__text {
+
+}
+
+.skills-group{
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-group__item{
+  display: block;
+  overflow: hidden;
+}
+
+.skills-group__title{
+  @include bernier;
+  font-size: 2em;
+  font-weight: 300;
+  padding-left: 1em;
+}
+
+.skills-list{
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.skills-list__item{
+  display: inline-block;
+
+}
+
+.skill{
+  padding: 0.5em;
+  margin-left: 1em;
+  position: relative;
+
+
+}
+
+.skill__circle{
+  width: 100px;
+  height: 100px;
+  display: block;
+  fill: transparent;
+  stroke-width: 15;
+  stroke: red;
+}
+
+.skills__circle-under{
+  stroke: #dfdcd5;
+
+}
+
+.skills__circle-above{
+  stroke: $green;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 361;
+  transition: all 1s;
+}
+
+.skill__title{
+  font-weight:100;
+  text-align: center;
+  @include centered();
+}

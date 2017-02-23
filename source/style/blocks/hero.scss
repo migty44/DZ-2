@@ -1,7 +1,7 @@
 .hero{
-	height: 600px;
-	overflow:hidden;
-	position: relative;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
 }
 .hero__bg{
 	top:0;
@@ -35,7 +35,8 @@
 }
 
 .user__pic{
-	
+  max-width: 170px;
+  height: auto;
 }
 
 .user__name{

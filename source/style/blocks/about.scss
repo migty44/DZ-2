@@ -1,3 +1,106 @@
+.about{
+  @extend %clearfix;
+}
 .about__col{
-	
+  float: left;
+  width: 50%;
+  position: relative;
+
+    &_left{ // склеивание селекторов
+      background: $white;
+
+      .about__triangle{
+        left: 0;
+        fill: $white;
+      }
+
+    }
+
+    &_right{
+      background: $bejeviy;
+
+      .about__triangle{
+        right: 0;
+        fill: $bejeviy;
+      }
+    }
+}
+
+.section-wrapper{
+  float: right;
+  width: 600px;
+  text-align: center;
+}
+
+.about__triangle {
+  display: block;
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  bottom: 100%;
+}
+
+
+.section-title{
+  background-image: url(../img/about_bg.png);
+  font-size: 4em;
+  color: $titlegrey;
+  text-align: center;
+  padding: 45px 80px;
+  display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include bernier;
+  position: relative;
+
+    &:before, &:after{
+      content: "";
+      display: block;
+      width: 22px;
+      height: 5px;
+      @include centered(y);
+      background: #c9c9c6;
+    }
+
+    &:before{
+      left: 30px;
+    }
+
+    &:after{
+      right: 30px;
+    }
+}
+
+
+.block-title{
+  @include bernier;
+  font-size: 2.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $titlegrey;
+  display: inline-block;
+  position: relative;
+
+  &:before, &:after{
+    content: "";
+    display: block;
+    width: 22px;
+    height: 5px;
+    @include centered(y);
+    background: #c9c9c6;
+  }
+
+  &:before{
+    left: 30px;
+  }
+
+  &:after{
+    right: 30px;
+  }
+}
+
+.block-text{
+  padding: 1em 80px;
+  text-align: left;
 }

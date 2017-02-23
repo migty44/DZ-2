@@ -1,4 +1,17 @@
+// colors
+
+$white: #fff;  // переменна объявляется с $ и также вставляется
+$bejeviy: #eeebdf;
+$green: #10c1a8;
+$titlegrey: #373e42;
+
+//mixins
+
 @import 'mixins/centered';
+
+//fonts
+
+@import "mixins/fonts";
 
 body {
   margin: 0;
@@ -8,3 +21,6 @@ body {
 @import 'blocks/user';
 @import 'blocks/hero';
 @import 'blocks/about';
+@import 'blocks/skylls';
+@import 'blocks/socials';
+

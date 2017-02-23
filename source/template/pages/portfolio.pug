@@ -1,53 +1,150 @@
 extends ../_template
 
 block variables
-	- var title = 'Константинов Данил'
+    - var title = 'Константинов Данил'
 
 block content
-	.wrapper
-		section.l-section.hero
-			.hero__bg
-				img(src="assets/img/backgr1800.png" alt="").hero_bg-img
+    .wrapper
+        section.section.hero
+            .hero__bg
+                img(src="assets/img/backgr1800.png" alt="").hero_bg-img
 
-			.hero__container
-				img.c-hero__title-pic
+            .hero__container
+                .user
+                    .user__pic-container
+                        img(src="assets/img/person.png" alt="").user__pic
+                    .user__name
+                        | Danil Konstantinov
+                    .user__desc
+                        | Lifestyle blog
 
-				.user
-					.user__pic-container
-						img(src="assets/img/person.png" alt="").user__pic
-					.user__name
-						| Danil Konstantinov
-					.user__desc
-						| Directors site
+            ul.socials
+                - var icons = ['vk', 'github', 'in']
 
-			ul.socials
-				li.socials__item
-					a.socials__link
+                each icon in icons
+                    li.socials__item
+                        a(href="#").socials__link
+                            svg.socials__icon
+                                use(xlink:href=`assets/img/sprite.svg#${icon}`)
 
-		section.section.about
-			.about__col.about__col_left
-				svg.about__triangle
-				.c-section-title
-					| Обо мне
-				.c-about
-					.c-about__pic
-					.c-block-title
-					.c-block-text
 
-			.l-about__col.l-about__col_right
-				.l-skills
-					.c-block-title
-					.l-skills__text
-						p
-						p
-						p
-					ul.l-skills-group
-						li.l-skills-group__item
-							.c-skills-group__title Frontend
-							ul.l-skills-list
-								li.l-skills-list__item
-									.c-skill
-										svg.c-skill__circle
-										.c-skill__title
+        section.about
+            .about__col.about__col_left
+                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                    polygon(points="0,0 0,110 1000,110")
 
-		section.l-section.l-map
+                .section-wrapper
+                    .section-title
+                        | Обо мне
+                    .about
+                        .about__pic-container
+                            img(src="assets/img/person.png" alt="").about__pic
+                        .block-title
+                            | кто я
+                        .block-text
+                            p
+                                |текст текст текст текст текст текст текст
+                                |текст текст текст текст текст текст текст
+                            p
+                                |текст текст текст текст текст текст текст
+                                |текст текст текст текст текст текст текст
+
+            .about__col.about__col_right
+                svg(viewBox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                    polygon(points="0,110 1000,110 1000,0")
+
+                .skills
+                    .skills__title
+                        |Чем я могу быть вам полезен
+                    .skills__text
+                        p
+                            |Больше всего меня привлекает отдавать фронт-энд разработку джуниор-девелоперу
+                        p
+                            |Но все наши джуны - из поколения Y, поэтому кросс-браузерную верстку им не доверяю!
+
+                    ul.skills-group
+                        li.skills-group__item
+                            .skills-group__title Frontend
+                            ul.skills-list
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            | HTML 5
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            | CSS 3
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            |Java Script &
+                                            |jQuery
+                    ul.skills-group
+                        li.skills-group__item
+                            .skills-group__title Frontend
+                            ul.skills-list
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            | HTML 5.
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            | HTML 5.
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            | HTML 5.
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            | HTML 5.
+                    ul.skills-group
+                        li.skills-group__item
+                            .skills-group__title Frontend
+                            ul.skills-list
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            | HTML 5.
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            | HTML 5.
+                                li.skills-list__item
+                                    .skill
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        .skill__title
+                                            | HTML 5.
+
+
+        section.section.map
