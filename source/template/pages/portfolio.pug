@@ -27,6 +27,9 @@ block content
                             svg.socials__icon
                                 use(xlink:href=`assets/img/sprite.svg#${icon}`)
 
+            .hamburger
+                img(src="assets/img/hamburger.png" alt="").hamburger__img
+
 
         section.about
             .about__col.about__col_left
@@ -148,3 +151,43 @@ block content
 
 
         section.section.map
+            img(src="assets/img/Layer 15.png" alt="").map__background
+
+            .map__contacts
+                h3 Контакты
+                ul.map-contact
+                    li.map-contact__item skype
+                    li.map-contact__item migty@mail.ru
+                    li.map-contact__item 8 921 350-10-00
+                    li.map-contact__item г. Санкт-петербург, ул. Сибирская д.9
+
+
+        footer.footer
+
+            .footer__col.footer__col_left
+                ul.footer-nav
+                    li.footer-nav__item Мои работы
+                    li.footer-nav__item Обо мне
+                    li.footer-nav__item Блог
+                    li.footer-nav__item Авторизация
+
+
+            .footer__col.footer__col_right
+                ul.footer-socials
+                - var icons = ['vk', 'github', 'in']
+
+                each icon in icons
+                    li.footer-socials__item
+                        a(href="#").socials__link
+                            svg.social-svg
+                                circle(cx="24" cy="24" r="22").social__circle
+                                use(xlink:href=`assets/img/sprite.svg#${icon}`).socials__icon
+
+
+            hr
+
+            .copyright
+                p
+                    | Больше всего меня привлекает отдавать фронт-энд разработку джуниор-девелоперу
+
+            .copyright-right

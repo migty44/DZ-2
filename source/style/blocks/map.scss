@@ -1,0 +1,16 @@
+.map{
+  height: 930px;
+  position: relative;
+}
+
+.map__background{
+  max-width: 100%;
+  height: auto;
+}
+
+.map__contacts{
+  background: url("../img/RoundedRectangle1.png") 0 0 no-repeat;
+  height: 290px;
+  width: 380px;
+  @include centered();
+}

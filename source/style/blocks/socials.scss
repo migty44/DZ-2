@@ -1,20 +1,31 @@
 .socials{
-  background: $green;
   position: absolute;
   top: 20px;
   left: 20px;
+  margin: 0;
+  padding: 0;
 
 }
 
 .socials__item{
   display: inline-block;
   vertical-align: middle;
-  width: 50px;
+  list-style: inside none;
 
 }
 
-socials__icon{
-  width: 25px;
+.socials__icon{
+  width: 35px;
   height: 35px;
+  fill: #ffffff;
+}
+
+.hamburger{
+  position: absolute;
+  top:20px;
+  right: 20px;
+}
+
+.hamburger__img{
 
 }

@@ -29,3 +29,27 @@
 @mixin bernier () {
   font-family: bernier;
 }
+
+@mixin list ($style, $alignmant) {
+
+	.#{$style}{
+		display: block;
+		list-style: inside none;
+		margin: 0;
+		padding: 0;
+		vertical-align: top;
+		text-align: #{$alignmant};
+	}
+
+	.#{$style}__item{
+		display: inline-block;
+		margin-right: 1em;
+
+		&:last-child{
+			margin: 0;
+		}
+	}
+
+
+}
+
