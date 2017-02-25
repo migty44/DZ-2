@@ -18,14 +18,15 @@ block content
                     .user__desc
                         | Lifestyle blog
 
-            ul.socials
-                - var icons = ['vk', 'github', 'in']
+            .hero__social-blok
+                ul.socials-list
+                    - var icons = ['vk', 'github', 'in']
 
-                each icon in icons
-                    li.socials__item
-                        a(href="#").socials__link
-                            svg.socials__icon
-                                use(xlink:href=`assets/img/sprite.svg#${icon}`)
+                    each icon in icons
+                        li.socials-list__item
+                            a(href="#").socials-list__link
+                                svg.socials-list__icon
+                                    use(xlink:href=`assets/img/sprite.svg#${icon}`)
 
             .hamburger
                 img(src="assets/img/hamburger.png" alt="").hamburger__img
@@ -39,7 +40,7 @@ block content
                 .section-wrapper
                     .section-title
                         | Обо мне
-                    .about
+                    .section-about
                         .about__pic-container
                             img(src="assets/img/person.png" alt="").about__pic
                         .block-title
@@ -65,9 +66,10 @@ block content
                         p
                             |Но все наши джуны - из поколения Y, поэтому кросс-браузерную верстку им не доверяю!
 
-                    ul.skills-group
+                    ul.skills-group-list
                         li.skills-group__item
-                            .skills-group__title Frontend
+                            .skills-group__title
+                                |Frontend
                             ul.skills-list
                                 li.skills-list__item
                                     .skill
@@ -91,7 +93,7 @@ block content
                                         .skill__title
                                             |Java Script &
                                             |jQuery
-                    ul.skills-group
+
                         li.skills-group__item
                             .skills-group__title Frontend
                             ul.skills-list
@@ -123,7 +125,7 @@ block content
                                             circle(cx="50" cy="50" r="40").skills__circle-above
                                         .skill__title
                                             | HTML 5.
-                    ul.skills-group
+
                         li.skills-group__item
                             .skills-group__title Frontend
                             ul.skills-list
@@ -153,13 +155,38 @@ block content
         section.section.map
             img(src="assets/img/Layer 15.png" alt="").map__background
 
-            .map__contacts
-                h3 Контакты
-                ul.map-contact
-                    li.map-contact__item skype
-                    li.map-contact__item migty@mail.ru
-                    li.map-contact__item 8 921 350-10-00
-                    li.map-contact__item г. Санкт-петербург, ул. Сибирская д.9
+            .map__contacts_center
+                .contacts-blok
+
+                    h3.contacts-blok__header Контакты
+
+                    ul.contact-list
+
+                        - var contacticons = ['skype', 'envelope_n', 'phone2', 'map_marker']
+
+                        li.contact-list__item
+                            i.contact-list__i
+                                svg.contact-list__icon
+                                    use(xlink:href=`assets/img/sprite.svg#${contacticons[0]}`)
+                            a(href="#") skype
+
+                        li.contact-list__item
+                            i.contact-list__i
+                                svg.contact-list__icon
+                                    use(xlink:href=`assets/img/sprite.svg#${contacticons[1]}`)
+                            a(href="#") migty@mail.ru
+
+                        li.contact-list__item
+                            i.contact-list__i
+                                svg.contact-list__icon
+                                    use(xlink:href=`assets/img/sprite.svg#${contacticons[2]}`)
+                            a(href="#") 8 921 350-10-00
+
+                        li.contact-list__item
+                            i.contact-list__i
+                                svg.contact-list__icon
+                                    use(xlink:href=`assets/img/sprite.svg#${contacticons[3]}`)
+                            |г. Санкт-петербург, ул. Сибирская д.9
 
 
         footer.footer
@@ -171,17 +198,17 @@ block content
                     li.footer-nav__item Блог
                     li.footer-nav__item Авторизация
 
-
             .footer__col.footer__col_right
-                ul.footer-socials
-                - var icons = ['vk', 'github', 'in']
 
-                each icon in icons
-                    li.footer-socials__item
-                        a(href="#").socials__link
-                            svg.social-svg
-                                circle(cx="24" cy="24" r="22").social__circle
-                                use(xlink:href=`assets/img/sprite.svg#${icon}`).socials__icon
+                    .footer-socials
+                        ul.socials-list
+
+                            each icon in icons
+                                li.socials-list__item
+                                    a(href="#").socials-list__link
+                                        svg.socials-list__icon
+                                            circle(cx="24" cy="24" r="22").social__circle
+                                            use(xlink:href=`assets/img/sprite.svg#${icon}`)
 
 
             hr

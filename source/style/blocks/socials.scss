@@ -1,4 +1,4 @@
-.socials{
+.hero__social-blok{
   position: absolute;
   top: 20px;
   left: 20px;
@@ -7,14 +7,25 @@
 
 }
 
-.socials__item{
+.socials-list{
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.socials-list__item{
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   list-style: inside none;
 
 }
 
-.socials__icon{
+.socials-list__link{
+  display: block;
+  padding: 0.5em;
+
+}
+.socials-list__icon{
   width: 35px;
   height: 35px;
   fill: #ffffff;

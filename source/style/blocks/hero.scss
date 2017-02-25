@@ -1,3 +1,7 @@
+.wrapper{
+	position: relative;
+}
+
 .hero{
   height: 600px;
   overflow: hidden;
@@ -10,8 +14,8 @@
 }
 
 .hero__container{
-	@include centered(y);
-	width: 100%;
+	position: relative;
+	height: 100%;
 }
 
 .c-hero__title-pic{
@@ -40,7 +44,6 @@
 }
 
 .user__name{
-
 	margin-bottom: 10px;
 	font-size: 2.2em;
 	
@@ -48,6 +51,5 @@
 
 .user__desc{
 
-	
 }
 

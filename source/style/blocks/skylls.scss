@@ -1,4 +1,5 @@
 .skills {
+  padding:  0 2em;
 
 }
 .skills__title {
@@ -6,12 +7,11 @@
   font-size: 2.2em;
   font-weight: 700;
   text-transform: uppercase;
-  width: 60%;
-  margin-left: 20%;
   text-align: center;
   color: $titlegrey;
   display: inline-block;
   position: relative;
+  padding: 1em 2em;
 
       &:before, &:after{
         content: "";
@@ -35,28 +35,27 @@
 
 }
 
-.skills-group{
+.skills-group-list{
   display: block;
   margin: 0;
   padding: 0;
-  list-style: none;
+
 }
 
 .skills-group__item{
   display: block;
-  overflow: hidden;
+  list-style: inside none;
+  margin-bottom: 1em;
 }
 
 .skills-group__title{
   @include bernier;
   font-size: 2em;
   font-weight: 300;
-  padding-left: 1em;
 }
 
 .skills-list{
   display: block;
-  list-style: none;
   margin: 0;
   padding: 0;
 
@@ -64,12 +63,15 @@
 
 .skills-list__item{
   display: inline-block;
+  list-style: inside none;
+  margin-right: 1em;
+    &:last-child{
+      margin-right: 0;
+    }
 
 }
 
 .skill{
-  padding: 0.5em;
-  margin-left: 1em;
   position: relative;
 }
 

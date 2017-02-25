@@ -1,12 +1,16 @@
 .about{
-  @extend %clearfix;
+  white-space: nowrap;
 }
 .about__col{
-  float: left;
+  display: inline-block;
   width: 50%;
   position: relative;
+  box-sizing: border-box;
+  white-space: normal;
+  height: 100%;
 
-    &_left{ // склеивание селекторов
+
+    &_left{
       background: $white;
 
       .about__triangle{
@@ -27,8 +31,6 @@
 }
 
 .section-wrapper{
-  float: right;
-  width: 600px;
   text-align: center;
 }
 
@@ -77,6 +79,7 @@
   @include bernier;
   font-size: 2.2em;
   font-weight: 700;
+  padding: 1em 2em;
   text-transform: uppercase;
   color: $titlegrey;
   display: inline-block;

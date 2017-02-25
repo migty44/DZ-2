@@ -8,9 +8,65 @@
   height: auto;
 }
 
-.map__contacts{
-  background: url("../img/RoundedRectangle1.png") 0 0 no-repeat;
-  height: 290px;
-  width: 380px;
+.map__contacts_center{
+  background-color: rgba(252,252,252,0.85);
   @include centered();
 }
+
+
+.contacts-blok{
+  padding: 1em 3em;
+
+}
+
+.contacts-blok__header{
+  @include bernier;
+  display: block;
+  font-size: 2em;
+  text-align: center;
+  padding: 1em 2em;
+  margin: 0;
+  position: relative;
+
+    &:before, &:after{
+      content: "";
+      display: block;
+      width: 22px;
+      height: 5px;
+      @include centered(y);
+      background: #c9c9c6;
+    }
+
+    &:before{
+      left: 30px;
+    }
+
+    &:after{
+      right: 30px;
+    }
+
+}
+.contact-list{
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list__item{
+  list-style: inside none;
+  margin-bottom: 1em;
+
+}
+
+.contact-list__i{
+  display: inline-block;
+  margin-right: 1em;
+  vertical-align: middle;
+
+}
+
+.contact-list__icon{
+  width: 35px;
+  height: 35px;
+  fill: $green;
+}
+
