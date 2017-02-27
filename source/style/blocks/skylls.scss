@@ -13,7 +13,18 @@
   position: relative;
   padding: 1em 2em;
 
-      &:before, &:after{
+    @include tablets{
+      font-size: 1.8em;
+      padding: 1em 6em;
+    }
+
+    @include iphones{
+      font-size: 1.6em;
+      padding: 1em 2em;
+    }
+
+
+  &:before, &:after{
         content: "";
         display: block;
         width: 22px;
@@ -39,6 +50,10 @@
   display: block;
   margin: 0;
   padding: 0;
+  @include tablets {
+    text-align: center;
+    padding: 2em 0;
+  }
 
 }
 
@@ -59,12 +74,26 @@
   margin: 0;
   padding: 0;
 
+  @include iphones{
+    display: inline-block;
+    text-align: center;
+    font-size: 0;
+  }
+
 }
 
 .skills-list__item{
   display: inline-block;
   list-style: inside none;
   margin-right: 1em;
+
+  @include iphones{
+    font-size: 16px;
+    width: 50%;
+    margin-right: 0;
+
+  }
+
     &:last-child{
       margin-right: 0;
     }

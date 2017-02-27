@@ -7,31 +7,74 @@
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
+  white-space: nowrap;
+
+  @include tablets{
+    height: auto;
+
+  }
+
+  @include iphones{
+    white-space: normal;
+  }
 }
 
-
-.footer__col_left{
+.footer__col{
   height: 80px;
-  float: left;
   width: 50%;
+
+  @include tablets{
+    height: auto;
+    text-align: center;
+    width: 100%;
+  }
+
+}
+.footer__col_left{
+  float: left;
+  @include tablets{
+    float: none;
+  }
+
 }
 
 .footer__col_right{
-  height: 80px;
   float: right;
-  width: 50%;
+  @include tablets{
+    float: none;
+  }
 }
 
-@include list (footer-nav, left);
+@include list (footer-nav-list, left);
+
+.footer-nav-list{
+  @include tablets{
+    display: inline-block;
+    text-align: center;
+  }
+
+}
 
 
-.footer-nav__item{
+.footer-nav-list__item{
   color: #fff;
   line-height: 20px;
   font-weight: 300;
   font-size: 1.2em;
-  padding: 1em 0;
+  padding: 0;
+  @include iphones{
 
+  }
+}
+
+.footer-nav__link{
+  color: #ffffff;
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  @include iphones{
+    padding: 1em 0;
+  }
 }
 
 
@@ -41,25 +84,61 @@ hr{
 }
 
 .copyright{
+  display: inline-block;
   height: 70px;
-  position: relative;
   bottom: 0;
+  vertical-align: top;
+  width: 50%;
+  white-space: nowrap;
+
+  @include tablets{
+    display: block;
+    height: auto;
+    width: 100%;
+    text-align: center!important;
+  }
+
+  @include iphones{
+    white-space: normal;
+  }
+
+}
+.copyright_left{
+  text-align: left;
+
+}
+
+.copyright_right{
+  text-align: right;
+
 }
 
 .footer-socials{
   text-align: right;
+  @include tablets{
+    display: inline-block;
+    text-align: center;
+  }
 }
 
-.social__circle{
-  width: 44px;
-  height: 44px;
+.socials-list__link_psevdo{
+  border: 1px solid #fafafa;
   display: block;
-  fill: transparent;
-  stroke-width: 2;
-  stroke: red;
+  padding: 7px;
+  border-radius: 50%;
+  height: 35px;
+  width:35px;
+    &:hover{
+      background-color: #fafafa;
+    }
+
+    &:active{
+      background-color: #fafafa;
+    }
+
+}
+.socials-list__icon{
 
 }
 
-.socials__icon{
 
-}

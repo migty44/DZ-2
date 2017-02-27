@@ -18,6 +18,12 @@ block content
                     .user__desc
                         | Lifestyle blog
 
+
+            .button-bottom.button-bottom_abscolute
+                a(href="#").button-bottom__link
+                    svg.button-bottom__icon
+                        use(xlink:href="assets/img/sprite.svg#arrow_down")
+
             .hero__social-blok
                 ul.socials-list
                     - var icons = ['vk', 'github', 'in']
@@ -28,8 +34,10 @@ block content
                                 svg.socials-list__icon
                                     use(xlink:href=`assets/img/sprite.svg#${icon}`)
 
-            .hamburger
-                img(src="assets/img/hamburger.png" alt="").hamburger__img
+            .hamburger_absolute
+                a(href="#").hamburger__link
+                    svg.hamburger__img
+                        use(xlink:href=`assets/img/sprite.svg#hamburger`)
 
 
         section.about
@@ -95,7 +103,7 @@ block content
                                             |jQuery
 
                         li.skills-group__item
-                            .skills-group__title Frontend
+                            .skills-group__title Backend
                             ul.skills-list
                                 li.skills-list__item
                                     .skill
@@ -103,31 +111,31 @@ block content
                                             circle(cx="50" cy="50" r="40").skills__circle-under
                                             circle(cx="50" cy="50" r="40").skills__circle-above
                                         .skill__title
-                                            | HTML 5.
+                                            | PHP
                                 li.skills-list__item
                                     .skill
                                         svg.skill__circle
                                             circle(cx="50" cy="50" r="40").skills__circle-under
                                             circle(cx="50" cy="50" r="40").skills__circle-above
                                         .skill__title
-                                            | HTML 5.
+                                            | mySQL
                                 li.skills-list__item
                                     .skill
                                         svg.skill__circle
                                             circle(cx="50" cy="50" r="40").skills__circle-under
                                             circle(cx="50" cy="50" r="40").skills__circle-above
                                         .skill__title
-                                            | HTML 5.
+                                            | Node.js & npm
                                 li.skills-list__item
                                     .skill
                                         svg.skill__circle
                                             circle(cx="50" cy="50" r="40").skills__circle-under
                                             circle(cx="50" cy="50" r="40").skills__circle-above
                                         .skill__title
-                                            | HTML 5.
+                                            | Mongo.db
 
                         li.skills-group__item
-                            .skills-group__title Frontend
+                            .skills-group__title WorkFlow
                             ul.skills-list
                                 li.skills-list__item
                                     .skill
@@ -135,25 +143,25 @@ block content
                                             circle(cx="50" cy="50" r="40").skills__circle-under
                                             circle(cx="50" cy="50" r="40").skills__circle-above
                                         .skill__title
-                                            | HTML 5.
+                                            | Git
                                 li.skills-list__item
                                     .skill
                                         svg.skill__circle
                                             circle(cx="50" cy="50" r="40").skills__circle-under
                                             circle(cx="50" cy="50" r="40").skills__circle-above
                                         .skill__title
-                                            | HTML 5.
+                                            | Gulp
                                 li.skills-list__item
                                     .skill
                                         svg.skill__circle
                                             circle(cx="50" cy="50" r="40").skills__circle-under
                                             circle(cx="50" cy="50" r="40").skills__circle-above
                                         .skill__title
-                                            | HTML 5.
+                                            | Bower
 
 
-        section.section.map
-            img(src="assets/img/Layer 15.png" alt="").map__background
+        section.map
+            .map__background
 
             .map__contacts_center
                 .contacts-blok
@@ -192,11 +200,15 @@ block content
         footer.footer
 
             .footer__col.footer__col_left
-                ul.footer-nav
-                    li.footer-nav__item Мои работы
-                    li.footer-nav__item Обо мне
-                    li.footer-nav__item Блог
-                    li.footer-nav__item Авторизация
+                ul.footer-nav-list
+                    li.footer-nav-list__item
+                        a(href="#").footer-nav__link Мои работы
+                    li.footer-nav-list__item
+                        a(href="#").footer-nav__link Обо мне
+                    li.footer-nav-list__item
+                        a(href="#").footer-nav__link Блог
+                    li.footer-nav-list__item
+                        a(href="#").footer-nav__link Авторизация
 
             .footer__col.footer__col_right
 
@@ -205,16 +217,17 @@ block content
 
                             each icon in icons
                                 li.socials-list__item
-                                    a(href="#").socials-list__link
-                                        svg.socials-list__icon
-                                            circle(cx="24" cy="24" r="22").social__circle
+                                    a(href="#").socials-list__link_psevdo
+                                        svg.socials-list__icon_color_green
                                             use(xlink:href=`assets/img/sprite.svg#${icon}`)
 
 
             hr
 
-            .copyright
+            .copyright.copyright_left
                 p
                     | Больше всего меня привлекает отдавать фронт-энд разработку джуниор-девелоперу
 
-            .copyright-right
+            .copyright.copyright_right
+                p
+                    | Константинов Данил @2017

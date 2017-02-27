@@ -37,7 +37,7 @@
 		list-style: inside none;
 		margin: 0;
 		padding: 0;
-		vertical-align: top;
+		vertical-align: middle;
 		text-align: #{$alignmant};
 	}
 
@@ -45,11 +45,23 @@
 		display: inline-block;
 		margin-right: 1em;
 
+
 		&:last-child{
 			margin: 0;
 		}
 	}
 
+}
 
+@mixin tablets () {
+	@media screen and (max-width: 768px){
+		@content
+	}
+}
+
+@mixin iphones () {
+	@media screen and (max-width: 480px){
+		@content
+	}
 }
 

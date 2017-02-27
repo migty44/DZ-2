@@ -25,18 +25,27 @@
   padding: 0.5em;
 
 }
-.socials-list__icon{
+.socials-list__icon, .socials-list__icon_color_green{
   width: 35px;
   height: 35px;
   fill: #ffffff;
+    &_color_green{
+      fill: $green;
+    }
 }
 
-.hamburger{
+.hamburger_absolute{
   position: absolute;
   top:20px;
   right: 20px;
 }
 
-.hamburger__img{
+.hamburger__link{
+  display: block;
+}
 
+.hamburger__img{
+  fill: #ffffff;
+  height: 40px;
+  width: 40px;
 }

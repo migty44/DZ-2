@@ -1,14 +1,29 @@
 .about{
   white-space: nowrap;
+  font-size: 0;
+
+    @include tablets{
+      font-size: 1em;
+      white-space: normal;
+      position: relative;
+    }
+
+
 }
 .about__col{
   display: inline-block;
   width: 50%;
   position: relative;
   box-sizing: border-box;
+  vertical-align: top;
   white-space: normal;
   height: 100%;
+  font-size: 16px;
 
+  @include tablets{
+    width: 100%;
+    position: static;
+  }
 
     &_left{
       background: $white;
@@ -26,6 +41,10 @@
       .about__triangle{
         right: 0;
         fill: $bejeviy;
+
+          @include tablets{
+            fill: $white;
+          }
       }
     }
 }
@@ -40,6 +59,10 @@
   height: 110px;
   position: absolute;
   bottom: 100%;
+
+  @include tablets{
+    width: 50%;
+  }
 }
 
 
@@ -74,6 +97,14 @@
     }
 }
 
+.about__pic-container{
+
+}
+
+.about__pic{
+  max-width: 100%;
+  height: auto;
+}
 
 .block-title{
   @include bernier;
@@ -85,6 +116,14 @@
   display: inline-block;
   position: relative;
 
+    @include iphones{
+      font-size: 1.8em;
+      padding: 1em;
+      line-height: 1.8em;
+      vertical-align: bottom;
+
+    }
+
   &:before, &:after{
     content: "";
     display: block;
@@ -95,15 +134,19 @@
   }
 
   &:before{
-    left: 30px;
+    left: -10px;
   }
 
   &:after{
-    right: 30px;
+    right: -10px;
   }
 }
 
 .block-text{
   padding: 1em 80px;
   text-align: left;
+    @include iphones{
+      padding: 1em;
+      text-align: center;
+    }
 }

@@ -1,3 +1,10 @@
+body{
+	@include tablets{
+		font-size: 0.825em;
+		width: 100%;
+	}
+
+}
 .wrapper{
 	position: relative;
 }
@@ -49,7 +56,25 @@
 	
 }
 
-.user__desc{
+.button-bottom{
 
 }
 
+.button-bottom_abscolute{
+	position: absolute;
+	@include centered(x);
+	bottom: 50px;
+	z-index: 50;
+}
+
+.button-bottom__link{
+	display: block;
+	padding: 8px;
+
+}
+
+.button-bottom__icon{
+	height: 40px;
+	width: 40px;
+	fill: #ffffff;
+}
