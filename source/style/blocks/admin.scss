@@ -1,0 +1,64 @@
+.admin-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.admin-head{
+  background: $green;
+  height: 100px;
+  width: 100%;
+}
+
+.admin-nav{
+  align-items: center;
+  width: 100%;
+}
+
+.admin-nav__list{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-nav__item{
+  list-style: inside none;
+  justify-content: flex-start;
+
+}
+
+.admin-nav__link{
+  background-color: #999;
+  border-right: 2px solid #ffffff;
+  display: block;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  &:hover{
+    background-color: #ffffff;
+  }
+}
+
+
+.admin-title{
+  margin: 2em 0 1em;
+  font-size: 1.2em;
+
+}
+
+.admin-content{
+  display: flex;
+
+}
+
+.admin-blok{
+
+}
+
+.blok-3{
+  align-self: flex-end;
+
+}
+
+.admin-footer{
+
+}

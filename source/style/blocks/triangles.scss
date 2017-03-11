@@ -1,0 +1,34 @@
+// блок Триангл
+
+.triangles{
+  bottom: 100%;
+  height: 110px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+
+  @include tablets{
+    height: 60px;
+  }
+}
+
+.triangles__left, .triangles__right{
+  fill: $white;
+  width: 50%;
+  float: left;
+}
+
+.triangles__right_white{
+  fill: $white;
+  fill: $bejeviy;
+}
+
+.triangle__svg{
+  height: 110px;
+  width: 100%;
+
+  @include tablets{
+    height: 60px;
+  }
+
+}

@@ -1,10 +1,12 @@
 .hero__social-blok{
+  margin: 0;
+  padding: 0;
+}
+
+.hero__social-blok_absolute{
   position: absolute;
   top: 20px;
   left: 20px;
-  margin: 0;
-  padding: 0;
-
 }
 
 .socials-list{

@@ -1,0 +1,36 @@
+extends ../_index-template
+
+block variables
+    - var title = 'Админ'
+
+    .admin-wrapper
+
+        .admin-head Панель администрирования
+
+        .admin-nav
+
+            ul.admin-nav__list
+                li.admin-nav__item
+                    a.admin-nav__link.admin-nav__link_active(href="#") Tab 1
+
+                li.admin-nav__item
+                    a.admin-nav__link(href="#") Tab 2
+
+                li.admin-nav__item
+                    a.admin-nav__link(href="#") Tab 3
+
+                li.admin-nav__item
+                    a.admin-nav__link(href="#") Tab 4
+
+        .admin-title Страница "Обо мне"
+
+        .admin-content
+            .admin-blok.blok-1 Frontend
+            .admin-blok.blok-2 Workflow
+            .admin-blok.blok-3 Backend
+
+
+        .footer.admin-footer
+
+
+

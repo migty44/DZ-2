@@ -1,7 +1,22 @@
-extends ../_template
+extends ../_index-template
 
 block variables
   - var title = 'Home page'
 
-block content
-  include ../common/_greating
+  .wrapper
+    section.section.hero
+      .hero__bg
+        img(src="assets/img/backgr1800.png" alt="").hero_bg-img
+
+      .hero__container
+        .user
+          .user__pic-container
+            img(src="assets/img/person.png" alt="").user__pic
+          .user__name
+            | Danil Konstantinov
+          .user__desc
+            | Lifestyle blog
+
+          include ../sections/_socials
+          include ../sections/_main-nav
+

@@ -1,0 +1,18 @@
+.blog {
+  height: 600px;
+  position: relative;
+}
+
+.blog__wrapper{
+  overflow: hidden;
+}
+
+.blog__column-left{
+  float: left;
+  width: 30%;
+}
+
+.blog__column-right{
+  float: left;
+  width: 70%;
+}

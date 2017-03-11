@@ -1,19 +1,21 @@
+.wrapper{
+	position: relative;
+}
+
 body{
 	@include tablets{
 		font-size: 0.825em;
 		width: 100%;
 	}
-
-}
-.wrapper{
-	position: relative;
 }
 
 .hero{
-  height: 600px;
-  overflow: hidden;
-  position: relative;
+	height: 90vh;
+	overflow: hidden;
+	position: relative;
+	min-height: 650px;
 }
+
 .hero__bg{
 	top:0;
 	width: 100%;
@@ -21,19 +23,16 @@ body{
 }
 
 .hero__container{
-	position: relative;
-	height: 100%;
-}
-
-.c-hero__title-pic{
-	@include centered();
+	margin-top: 10%;
+	@include centered(x);
 }
 
 .user{
+	background: $bejeviy;
 	color: #fff;
 	font-weight:100;
 	text-align: center;
-	@include centered();
+	padding: 3em;
 }
 
 .user__pic-container{
@@ -53,7 +52,6 @@ body{
 .user__name{
 	margin-bottom: 10px;
 	font-size: 2.2em;
-	
 }
 
 .button-bottom{

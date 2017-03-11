@@ -1,0 +1,50 @@
+extends ../_index-template
+
+block variables
+    - var title = 'dscfdc'
+
+
+    .slider-wrapper
+
+        .slider.slider_first
+            .slider__display
+                ul.slider__list
+                    li.slider__item.active
+                        img(src='assets/img/slide1_min.png').slider__img
+                    li.slider__item
+                        img(src='assets/img/slide2_min.png').slider__img
+                    li.slider__item
+                        img(src='assets/img/slide3_min.png').slider__img
+
+            .slider__controls
+                a.slider__controls-top(href='#') Следующая
+
+
+        .slider.slider_second
+            .slider__display
+                ul.slider__list
+                    li.slider__item.slider__item_right.active
+                        img(src='assets/img/slide1_min.png').slider__img
+                    li.slider__item.slider__item_right
+                        img(src='assets/img/slide2_min.png').slider__img
+                    li.slider__item.slider__item_right
+                        img(src='assets/img/slide3_min.png').slider__img
+
+
+    .slideshow
+        .slideshow__display
+            #preloader
+            img.slideshow__display-pic(src='assets/img/slide1.png')
+
+        ul.slideshow__list
+            li.slideshow__item
+                a.slideshow__link(href='assets/img/slide1.png')
+                    img(src='assets/img/slide1_min.png').slideshow__prev-img
+
+            li.slideshow__item
+                a.slideshow__link(href='assets/img/slide2.png')
+                    img(src='assets/img/slide2_min.png').slideshow__prev-img
+
+            li.slideshow__item
+                a.slideshow__link(href='assets/img/slide3.png')
+                    img(src='assets/img/slide3_min.png').slideshow__prev-img

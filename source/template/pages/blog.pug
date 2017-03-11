@@ -1,0 +1,75 @@
+extends ../_index-template
+
+block variables
+    - var title = 'Константинов Данил'
+
+    .wrapper
+
+        include ../sections/_header
+
+        .hero__social-blok.hero__social-blok_absolute
+            include ../sections/_socials
+
+        .hamburger_absolute
+            a(href="#").hamburger__link
+                svg.hamburger__img
+                    use(xlink:href=`assets/img/sprite.svg#hamburger`)
+
+
+
+
+
+        section.section.blog
+
+            section.triangles
+
+                .triangles__left
+                    svg(viewBox="0 0 1000 110" preserveAspectRatio="none").triangle__svg
+                        polygon(points="0,0 0,110 1000,110")
+
+
+                .triangles__right
+                    svg(viewBox="0 0 1000 110" preserveAspectRatio="none").triangle__svg
+                        polygon(points="0,110 1000,110 1000,0")
+
+            section.blog__wrapper
+                .blog__column-left
+
+                    ul.blog-menu-list
+                        li.blog-menu-list__item
+                            a.blog-menu-list__link(href="#") Самое важное в SASS
+
+                        li.blog-menu-list__item
+                            a.blog-menu-list__link(href="#") Приемы верстки, без которых не обходится ни один сайт
+
+                        li.blog-menu-list__item
+                            a.blog-menu-list__link(href="#") Самый необходимый набор GULP плагинов
+
+                        li.blog-menu-list__item
+                            a.blog-menu-list__link(href="#") Почему я выбрал Jade
+
+                .blog__column-right
+                    article.blog-item
+                        h2.blog-item__title
+                            |Самое важное в SASS
+                        .blog-item__date
+                            |22 ноября 2016
+                        .blog-item__short-deskr
+                            | Самый необходимый набор GULP плагинов Самый необходимый набор GULP плагинов Самый необходимый
+                            | набор GULP плагинов Самый необходимый набор GULP плагинов Самый необходимый набор GULP плагинов
+                            | Самый необходимый набор GULP плагинов Самый необходимый набор GULP плагинов
+
+                        img(src="" title="").blog-item__img-intro
+
+
+                    article.blog-item
+                        h2.blog-item__title
+                            | Самое важное в SASS
+                        .blog-item__date
+                            | 22 ноября 2016
+                        .blog-item__short-deskr
+                            | Самый необходимый набор GULP плагинов Самый необходимый набор GULP плагинов Самый необходимый
+                            | набор GULP плагинов Самый необходимый набор GULP плагинов Самый необходимый набор GULP плагинов
+                            | Самый необходимый набор GULP плагинов Самый необходимый набор GULP плагинов
+
+                        img(src="" title="").blog-item__img-intro
