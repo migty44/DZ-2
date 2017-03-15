@@ -1,60 +1,192 @@
 $(function () {
     //загружен DOM
 
+    //console.log(window);
+
     preloader.init();
+
     slider.init();
+
     slideShow.init();
-    mobMenu.init()
+
+    mobMenu.init();
+
+    parallax.init();
+
+    login.init();
 
 
 
-    window.onscroll = function () {
+});
 
-        var wScroll = window.pageYOffset;
 
-        // parallax.deploy();
+var login = (function () {
 
-        parallax.init(wScroll);
+    var button = $('.flip__button'),
+        submitter = $('#submit'),
+        block_hero = $('.hero__container'),
+        block_login = $('.hero__login'),
+        flipper = $('.hero__flipper'),
+        flipVV = 0;
+
+
+    var _flipe = function () {
+
+        if (!flipVV) {
+            flipper.css('transform', 'rotateY(180deg)');
+            flipVV = 1;
+        } else {
+            flipper.css('transform' , 'none' );
+            flipVV = 0;
+        }
+
 
     };
 
-});
+
+    var _flipe1 = function () {
+
+        var active = flip_toggle == 0 ? block_hero : block_login;
+        var noactive = flip_toggle == 1 ? block_hero : block_login;
+
+        active.toggle(200, function () {
+            noactive.toggle(200, function () {
+                flip_toggle = flip_toggle == 1 ? 0 : 1;
+                console.log(flip_toggle );
+            });
+        });
+    }
+
+
+    var _submite = function (e) {
+        e.preventDefault();
+
+
+        console.log('добавление проекта');
+
+        var form = $(this),
+            url = 'add_project.php',
+            data = form.serialize();
+
+        console.log(data);
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            dataType : "json",
+            data : data,
+            success: function (data, textStatus) {
+                $.each(data, function(i, val) {
+                    /* ... */
+                });
+            }
+        })
+
+        .done(function (ans) {
+            console.log('success');
+            console.log(ans);
+        })
+
+        .fail(function () {
+                console.log('error');
+        })
+
+        .always(function () {
+                console.log('complete');
+        });
+
+    }
+
+    var init = function () {
+
+        button.on('click', _flipe);
+
+        //submitter.on('submit', _submite);
+
+        console.log(submitter)
+
+    }
+
+    return{
+
+        init : init
+
+    }
+}());
 
 
 var mobMenu = (function(){
 
     var ham = $('.hamburger__link'),
         fsmenu = $('.fsmenu'),
-        fsmenuClose = $('.fsmenu__close');
+        trigger = 0;
 
 
-    var movLeft = function ( menu ) {
+    var _movLeft = function ( menu ) {
 
-        menu.stop(true).animate({
+        //toggle() - меняет display - none на block и наоборот
+
+        menu.stop(true).toggle().animate({
 
             'left': 0
 
-        }, 300);
+        }, 300, function () {
 
-    }
+            trigger = 1; // перезаписываем глобальную тк нет VAR
+
+            $(document).bind('touchmove', false);
+            $("html,body").css("overflow","hidden");
+            $('body').addClass('.fixed');
+
+        });
+
+    };
+
+    var _movRight = function ( menu ) {
+
+        menu.stop(true).animate({
+
+            'left': '-100%'
+
+        }, 300, function () {
+
+            trigger = 0;
+
+            $(this).toggle();
+            $("html,body").css("overflow","auto");
+            $('body').removeClass('.fixed');
+
+            $(document).unbind('touchmove');
+
+        });
+
+    };
+
+    var init = function () {
+
+
+        ham.on('click', function (e) {
+            e.preventDefault();
+
+            if ( !trigger ) {
+
+                _movLeft(fsmenu);
+
+
+            } else{
+
+                _movRight(fsmenu);
+
+            }
+
+        });
+
+
+    };
 
     return {
-        init : function () {
-
-            ham.on('click', function (e) {
-                e.preventDefault();
-
-                movLeft( fsmenu );
-
-                console.log('sdcscd');
-
-
-            });
-
-            console.log('поехали меню');
-
-        }
-    }
+        init : init
+    };
 
 }());
 
@@ -247,33 +379,38 @@ var parallax = (function () {
     var bg = document.querySelector('.hero__bg'),
         user = document.querySelector('.hero__container');
 
+
+
+    var init = function (wScroll) {
+
+        window.onscroll = function () {
+
+            var wScroll = window.pageYOffset;
+
+            _move(bg, wScroll, 45);
+            _move(user, wScroll, 5);
+
+        };
+
+    };
+
+
+    var _move = function (block, windowScroll, strafeAmount) {
+
+        var strafe = windowScroll / -strafeAmount + '%',
+            style = block.style,
+            transformString = 'translate3d(-50%,' + strafe + ', 0)';
+
+
+        style.transform = transformString;
+        style.webkitTransform = transformString;
+
+    };
+
     return {
 
-          deploy : function () {
+          init : init
 
-              console.log( bg  );
-          },
-
-          move : function (block, windowScroll, strafeAmount){
-
-              var strafe = windowScroll / -strafeAmount + '%',
-                  style = block.style,
-                  transformString = 'translate3d(-50%,' + strafe + ', 0)';
-
-              //console.log( strafe );
-
-              //style.top = strafe;
-
-              style.transform = transformString;
-              style.webkitTransform = transformString;
-
-          },
-
-          init : function (wScroll) {
-
-              this.move( bg, wScroll , 45 );
-              this.move( user, wScroll, 5);
-          }
-      }
+      };
 
 })();

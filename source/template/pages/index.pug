@@ -8,15 +8,43 @@ block variables
       .hero__bg
         img(src="assets/img/backgr1800.png" alt="").hero_bg-img
 
-      .hero__container
-        .user
-          .user__pic-container
-            img(src="assets/img/person.png" alt="").user__pic
-          .user__name
-            | Danil Konstantinov
-          .user__desc
-            | Lifestyle blog
+      .hero__container.hero__container_flip
 
-          include ../sections/_socials
-          include ../sections/_main-nav
+        .hero__flipper
+            .hero__user
+              .user__pic-container
+                img(src="assets/img/person.png" alt="").user__pic
+              .user__name
+                | Danil Konstantinov
+              .user__desc
+                | Lifestyle blog
 
+              include ../sections/_socials
+              include ../sections/_main-nav
+
+            .hero__login
+                h4.login__title
+                  | Авторизуйтесь
+                form#login__form(name='авторизация', action='')
+                  .form__group
+                    label.form__label(for='login__input1')
+                    input.login__input1#login(type='text',size='40', placeholder='Логин')
+                  .form__group
+                    label.form__label(for='login__input')
+                    input.login__input#password(type='password', size='40', placeholder='Пароль')
+                  .form__group
+                    input(type='checkbox' name="norobot" value="norobot")
+                    | Я не робот
+                  .form__group
+                    | Вы точно не робот?
+                  .form__group
+                    input(type="radio" name="yes" value="yes" checked)
+                    | Да
+                    input(type="radio" name="no" value="no")
+                    | Не уверен
+                  input#submit(type="submit" name="submit" value="Отправить")
+
+
+
+    .flip__wrapper
+      button.flip__button Авторизоваться

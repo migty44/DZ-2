@@ -25,14 +25,21 @@ body{
 .hero__container{
 	margin-top: 10%;
 	@include centered(x);
+
 }
 
-.user{
+.hero__flipper, .hero__container, .hero__user, .hero__login{
+	width: 500px;
+	height: 500px;
+}
+
+.hero__user, .hero__login{
 	background: $bejeviy;
 	color: #fff;
 	font-weight:100;
 	text-align: center;
 	padding: 3em;
+	box-sizing: border-box;
 }
 
 .user__pic-container{
@@ -54,9 +61,6 @@ body{
 	font-size: 2.2em;
 }
 
-.button-bottom{
-
-}
 
 .button-bottom_abscolute{
 	position: absolute;
