@@ -25,6 +25,7 @@ body{
 .hero__container{
 	margin-top: 10%;
 	@include centered(x);
+	text-align: center;
 
 }
 
